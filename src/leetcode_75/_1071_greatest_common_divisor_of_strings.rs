@@ -40,7 +40,21 @@ impl Solution1 {
 
 /// best voted Solution
 /// ```rust
-
+/// impl Solution {
+///     pub fn gcd_of_strings(str1: String, str2: String) -> String {
+///         if &(str1.clone() + &str2) != &(str2.clone() + &str1) {
+///             return "".to_string();
+///         }
+///         let length = gcd(str1.len(), str2.len());
+///         str1[0..length].to_owned()
+///     }
+/// }
+/// pub fn gcd(n1: usize, n2: usize) -> usize{
+///     if n2 == 0 {
+///         return n1;
+///     }
+///     gcd(n2, n1 % n2)
+/// }
 /// ```
 
 #[test]
