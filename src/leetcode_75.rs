@@ -1,3 +1,4 @@
 mod _1768_merge_strings_alternately;
 mod _1071_greatest_common_divisor_of_strings;
 mod _1431_kids_with_the_greatest_number_of_candies;
+mod _605_can_place_flowers;
