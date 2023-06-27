@@ -1,5 +1,4 @@
 struct Solution;
-struct Solution1;
 
 impl Solution {
     pub fn gcd_of_strings(str1: String, str2: String) -> String {
@@ -18,6 +17,7 @@ impl Solution {
     }
 }
 
+struct Solution1;
 impl Solution1 {
     pub fn gcd(a: usize, b: usize) -> usize {
         if b == 0 {
@@ -39,23 +39,22 @@ impl Solution1 {
 }
 
 /// best voted Solution
-/// ```rust
-/// impl Solution {
-///     pub fn gcd_of_strings(str1: String, str2: String) -> String {
-///         if &(str1.clone() + &str2) != &(str2.clone() + &str1) {
-///             return "".to_string();
-///         }
-///         let length = gcd(str1.len(), str2.len());
-///         str1[0..length].to_owned()
-///     }
-/// }
-/// pub fn gcd(n1: usize, n2: usize) -> usize{
-///     if n2 == 0 {
-///         return n1;
-///     }
-///     gcd(n2, n1 % n2)
-/// }
-/// ```
+struct SolutionTop;
+impl SolutionTop {
+    pub fn gcd_of_strings(str1: String, str2: String) -> String {
+        if &(str1.clone() + &str2) != &(str2.clone() + &str1) {
+            return "".to_string();
+        }
+        let length = gcd(str1.len(), str2.len());
+        str1[0..length].to_owned()
+    }
+}
+pub fn gcd(n1: usize, n2: usize) -> usize {
+    if n2 == 0 {
+        return n1;
+    }
+    gcd(n2, n1 % n2)
+}
 
 #[test]
 fn test_1071() {
@@ -76,5 +75,17 @@ fn test_1071_1() {
     let result = Solution1::gcd_of_strings("LEET".to_string(), "CODE".to_string());
     assert_eq!(result, "");
     let result = Solution1::gcd_of_strings("ABABABAB".to_string(), "ABAB".to_string());
+    assert_eq!(result, "ABAB");
+}
+
+#[test]
+fn test_1071_top() {
+    let result = SolutionTop::gcd_of_strings("ABCABC".to_string(), "ABC".to_string());
+    assert_eq!(result, "ABC");
+    let result = SolutionTop::gcd_of_strings("ABABAB".to_string(), "ABAB".to_string());
+    assert_eq!(result, "AB");
+    let result = SolutionTop::gcd_of_strings("LEET".to_string(), "CODE".to_string());
+    assert_eq!(result, "");
+    let result = SolutionTop::gcd_of_strings("ABABABAB".to_string(), "ABAB".to_string());
     assert_eq!(result, "ABAB");
 }

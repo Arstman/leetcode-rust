@@ -1,5 +1,5 @@
 struct Solution;
-struct Solution1;
+struct SolutionTop;
 
 impl Solution {
     pub fn reverse_vowels(s: String) -> String {
@@ -25,7 +25,8 @@ impl Solution {
 }
 
 
-impl Solution1 {
+/// best voted Solution
+impl SolutionTop {
     pub fn reverse_vowels(s: String) -> String {
         let is_vowel = |b: u8| matches!(b, b'a' | b'e' | b'i' | b'o' | b'u' | b'A' | b'E' | b'I' | b'O' | b'U');
         let mut vb = s.into_bytes();
@@ -47,12 +48,6 @@ impl Solution1 {
     }
 }
 
-
-/// best voted Solution
-/// ```rust 
-/// as Solution1
-/// ```
-
 #[test]
 fn test_345() {
     assert_eq!(Solution::reverse_vowels("hello".to_string()), "holle".to_string());
@@ -61,9 +56,9 @@ fn test_345() {
 }
 
 #[test]
-fn test_345_1() {
-    assert_eq!(Solution1::reverse_vowels("hello".to_string()), "holle".to_string());
-    assert_eq!(Solution1::reverse_vowels("leetcode".to_string()), "leotcede".to_string());
-    assert_eq!(Solution1::reverse_vowels("aA".to_string()), "Aa".to_string());
+fn test_345_top() {
+    assert_eq!(SolutionTop::reverse_vowels("hello".to_string()), "holle".to_string());
+    assert_eq!(SolutionTop::reverse_vowels("leetcode".to_string()), "leotcede".to_string());
+    assert_eq!(SolutionTop::reverse_vowels("aA".to_string()), "Aa".to_string());
 
 }

@@ -16,32 +16,30 @@ impl Solution {
 }
 
 /// best vote solution
-///``` 
-///  use std::collections::HashMap;
-///  impl Solution 
-///  {
-///      pub fn contains_nearby_duplicate(nums: Vec<i32>, k: i32) -> bool 
-///      {
-///          // [1] all encountered numbers with their corresponding
-///          //     indices will be stored in a HashSet
-///          let mut seen = HashMap::with_capacity(nums.len());
-///          
-///          // [2] in this cycle, we both check for correct
-///          //     duplicates and update the dictionary
-///          for (i, n) in nums.into_iter().enumerate()
-///          {
-///              let j = seen.entry(n).or_insert(i);
-///              if *j != i && i-*j <= k as usize 
-///              {
-///                  return true;
-///              } else { *j=i; }
-///          }
-///          
-///          return false;
-///      }
-///  }
-///```
+use std::collections::HashMap;
 
+struct SolutionTop;
+
+impl SolutionTop {
+    pub fn contains_nearby_duplicate(nums: Vec<i32>, k: i32) -> bool {
+        // [1] all encountered numbers with their corresponding
+        //     indices will be stored in a HashSet
+        let mut seen = HashMap::with_capacity(nums.len());
+
+        // [2] in this cycle, we both check for correct
+        //     duplicates and update the dictionary
+        for (i, n) in nums.into_iter().enumerate() {
+            let j = seen.entry(n).or_insert(i);
+            if *j != i && i - *j <= k as usize {
+                return true;
+            } else {
+                *j = i;
+            }
+        }
+
+        return false;
+    }
+}
 
 #[test]
 fn test_219() {
@@ -63,4 +61,22 @@ fn test_219() {
     );
 }
 
-
+#[test]
+fn test_219_top() {
+    assert_eq!(
+        SolutionTop::contains_nearby_duplicate(vec![1, 2, 3, 1], 3),
+        true
+    );
+    assert_eq!(
+        SolutionTop::contains_nearby_duplicate(vec![1, 0, 1, 1], 1),
+        true
+    );
+    assert_eq!(
+        SolutionTop::contains_nearby_duplicate(vec![1, 2, 3, 1, 2, 3], 2),
+        false
+    );
+    assert_eq!(
+        SolutionTop::contains_nearby_duplicate(vec![1, 2, 3, 1, 2, 3], 3),
+        true
+    );
+}

@@ -8,10 +8,8 @@ impl Solution {
 }
 
 
-/// best voted Solution
-/// ```rust 
+/// best voted Solution as same
 
-/// ```
 
 #[test]
 fn test_1431() {
