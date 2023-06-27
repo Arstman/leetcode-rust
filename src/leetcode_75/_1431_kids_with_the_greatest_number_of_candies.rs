@@ -8,7 +8,7 @@ impl Solution {
 }
 
 
-/// best voted Solution as same
+/// Top Voted Solution as same
 
 
 #[test]

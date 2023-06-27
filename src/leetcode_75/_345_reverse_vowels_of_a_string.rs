@@ -25,7 +25,7 @@ impl Solution {
 }
 
 
-/// best voted Solution
+/// Top Voted Solution
 impl SolutionTop {
     pub fn reverse_vowels(s: String) -> String {
         let is_vowel = |b: u8| matches!(b, b'a' | b'e' | b'i' | b'o' | b'u' | b'A' | b'E' | b'I' | b'O' | b'U');

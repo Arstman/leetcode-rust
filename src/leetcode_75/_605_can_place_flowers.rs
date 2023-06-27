@@ -54,7 +54,7 @@ impl Solution1 {
     }
 }
 
-/// best voted Solution
+/// Top Voted Solution
 /*
  This one started off ugly for me. Maybe the test cases provide some insight there. I knew I was lacking on some edge cases and was able to easily create the representative test cases, which saved me from errant submissions.
 

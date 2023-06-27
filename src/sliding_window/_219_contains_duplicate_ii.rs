@@ -15,7 +15,7 @@ impl Solution {
     }
 }
 
-/// best vote solution
+/// Top voted solution
 use std::collections::HashMap;
 
 struct SolutionTop;

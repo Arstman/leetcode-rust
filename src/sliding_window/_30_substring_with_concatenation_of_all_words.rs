@@ -11,7 +11,7 @@ impl Solution {
     }
 }
 
-/// best voted Solution
+/// Top Voted Solution
 /// ```rust
 
 /// ```

@@ -5,7 +5,7 @@ impl Solution {
 }
 
 
-/// best voted Solution
+/// Top Voted Solution
 struct SolutionTop;
 
 impl SolutionTop {

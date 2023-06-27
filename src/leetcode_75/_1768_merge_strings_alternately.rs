@@ -28,7 +28,7 @@ impl Solution {
     }
 }
 
-/// best voted Solution
+/// Top Voted Solution
 struct SolutionTop;
 impl SolutionTop {
     pub fn merge_alternately(word1: String, word2: String) -> String {
