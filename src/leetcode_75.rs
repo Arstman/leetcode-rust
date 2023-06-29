@@ -1,6 +1,7 @@
 mod _151_reverse_words_in_a_string;
-mod _605_can_place_flowers;
+mod _238_product_of_array_except_self;
 mod _345_reverse_vowels_of_a_string;
+mod _605_can_place_flowers;
 mod _1071_greatest_common_divisor_of_strings;
 mod _1431_kids_with_the_greatest_number_of_candies;
 mod _1768_merge_strings_alternately;
