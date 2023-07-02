@@ -2,6 +2,7 @@ mod _151_reverse_words_in_a_string;
 mod _238_product_of_array_except_self;
 mod _334_increasing_triplet_subsequence;
 mod _345_reverse_vowels_of_a_string;
+mod _443_string_compression;
 mod _605_can_place_flowers;
 mod _1071_greatest_common_divisor_of_strings;
 mod _1431_kids_with_the_greatest_number_of_candies;

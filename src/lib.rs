@@ -11,5 +11,5 @@
 #![allow(clippy::needless_collect)]
 
 mod sliding_window;
-mod leetcode_75;
+mod array_and_strings;
 
