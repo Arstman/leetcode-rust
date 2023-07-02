@@ -12,4 +12,5 @@
 
 mod sliding_window;
 mod array_and_strings;
+mod double_pointers;
 
