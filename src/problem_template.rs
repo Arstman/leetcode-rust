@@ -6,11 +6,11 @@ impl Solution {
 
 
 /// Top Voted Solution
-struct SolutionTop;
+// struct SolutionTop;
 
-impl SolutionTop {
+// impl SolutionTop {
 
-}
+// }
 
 
 #[test]
@@ -18,7 +18,7 @@ fn test_X() {
 
 }
 
-#[test]
-fn test_X_top() {
+// #[test]
+// fn test_X_top() {
 
-}
+// }
