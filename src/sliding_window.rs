@@ -1,4 +1,5 @@
 mod _3_longest_substring_without_repeating_characters;
-mod _219_contains_duplicate_ii;
 mod _30_substring_with_concatenation_of_all_words;
+mod _219_contains_duplicate_ii;
+mod _643_maximun_average_subarray_1;
 
